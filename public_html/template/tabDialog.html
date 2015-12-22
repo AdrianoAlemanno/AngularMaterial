@@ -1,0 +1,50 @@
+
+<div ng-controller="AppCtrl">
+<md-dialog aria-label="Mango (Fruit)" ng-cloak style="max-width:800px;max-height:810px;">
+    <md-content flex md-scroll-y>
+        <form name="userForm">
+            <md-dialog-content>
+                <md-tabs md-dynamic-height md-stretch-tabs md-border-bottom md-selected="{{selectedIndex}}">
+                    <md-tab label="LOG IN">
+                        <md-content class="md-padding" flex md-scroll-y>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="SIGN IN">
+                        <md-content class="md-padding">
+                            <md-input-container class="md-block">
+                                <label>Insert your e-mail</label>
+                                <input required type="email" name="email" ng-model="user.email"
+                                       minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                                <div ng-messages="userForm.email.$error">
+                                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                        Your email must be between 10 and 100 characters long and look like an e-mail address.
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block">
+                                <label>Insert your password</label>
+                                <input required type="password" name="passwd" ng-model="user.passwd"
+                                       minlength="4" maxlength="15" />
+                                <div ng-messages="userForm.passwd.$error">
+                                    <div ng-message-exp="['required', 'minlength', 'maxlength']">
+                                        Your password must be between 4 and 15 characters
+                                    </div>
+                                </div>
+                            </md-input-container>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-dialog-content>
+            <md-dialog-actions layout="row">
+                <span flex></span>
+                <md-button ng-click="answer('not useful')" >
+                    Not Useful
+                </md-button>
+                <md-button ng-click="answer('useful')" style="margin-right:20px;" >
+                    Useful
+                </md-button>
+            </md-dialog-actions>
+        </form>
+    </md-content>
+</md-dialog>
+</div>

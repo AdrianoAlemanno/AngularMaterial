@@ -1,0 +1,55 @@
+
+<md-content ng-controller="Dashboard">
+    <md-tabs md-span md-stretch-tabs="always">
+        <md-tab id="coursesTab">
+            <md-tab-label>Courses</md-tab-label>
+            <md-tab-body>
+                <div>
+                    <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
+                        Toggle left
+                    </md-button>
+                </div>
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                            <span class="md-subhead">Medium</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-md card-media"></div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button>Action 1</md-button>
+                        <md-button>Action 2</md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-tab-body>
+        </md-tab>
+        <md-tab id="teachersTab">
+            <md-tab-label>Teachers</md-tab-label>
+            <md-tab-body>
+                <div>
+                    <md-button ng-click="toggleRight()" ng-if="!isOpenRight()" class="md-primary">
+                        Toggle right
+                    </md-button>
+                </div>
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                            <span class="md-subhead">Medium</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-md card-media"></div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button>Action 1</md-button>
+                        <md-button>Action 2</md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+</md-content>
